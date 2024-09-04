@@ -1,7 +1,7 @@
 import { Tabs } from "expo-router";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { AntDesign } from '@expo/vector-icons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 export default function Layout() {
     return (
@@ -10,13 +10,18 @@ export default function Layout() {
                 name="home"
                 options={{
                     tabBarLabel: "Home",
-                    tabBarLabelStyle: { color: "#7cb9e8" },
+                    tabBarLabelStyle: ({ focused}) =>
+                        focused? (
+                            color="#00A8FF"
+                        ) : (
+                            color="#2d2e2e"
+                    ),
                     headerShown: false,
                     tabBarIcon: ({ focused }) =>
                         focused ? (
-                            <FontAwesome name="tasks" size={24} color="#7cb9e8" />
+                            <FontAwesome name="tasks" size={24} color="#00A8FF" />
                         ) : (
-                            <FontAwesome name="tasks" size={24} color="black" />
+                            <FontAwesome name="tasks" size={24} color="#2d2e2e" />
                         )
                 }}
             />
@@ -24,13 +29,18 @@ export default function Layout() {
                 name="calendar"
                 options={{
                     tabBarLabel: "Calendar",
-                    tabBarLabelStyle: { color: "#7CB9E8" },
+                    tabBarLabelStyle: ({ focused}) =>
+                        focused? (
+                            color="#00A8FF"
+                        ) : (
+                            color="#2d2e2e"
+                    ),
                     headerShown: false,
                     tabBarIcon: ({ focused }) =>
                         focused ? (
-                            <AntDesign name="calendar" size={24} color="#7CB9E8" />
+                            <AntDesign name="calendar" size={24} color="#00A8FF" />
                         ) : (
-                            <AntDesign name="calendar" size={24} color="black" />
+                            <AntDesign name="calendar" size={24} color="#2d2e2e" />
                         )
                 }}
             />
@@ -38,13 +48,18 @@ export default function Layout() {
                 name="account"
                 options={{
                     tabBarLabel: "Account",
-                    tabBarLabelStyle: { color: "#7CB9E8" },
+                    tabBarLabelStyle: ({ focused}) =>
+                        focused? (
+                            color="#00A8FF"
+                        ) : (
+                            color="#2d2e2e"
+                    ),
                     headerShown: false,
                     tabBarIcon: ({ focused }) =>
                         focused ? (
-                            <MaterialCommunityIcons name="account-details" size={24} color="#7CB9E8" />
+                            <MaterialCommunityIcons name="account" size={24} color="#00A8FF" />
                         ) : (
-                            <MaterialCommunityIcons name="account-details" size={24} color="black" />
+                            <MaterialCommunityIcons name="account" size={24} color="#2d2e2e" />
                         )
                 }}
             />
