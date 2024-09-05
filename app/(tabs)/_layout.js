@@ -1,5 +1,6 @@
 import { Tabs } from "expo-router";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { AntDesign } from '@expo/vector-icons';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
@@ -19,9 +20,9 @@ export default function Layout() {
                     headerShown: false,
                     tabBarIcon: ({ focused }) =>
                         focused ? (
-                            <FontAwesome name="tasks" size={24} color="#00A8FF" />
+                            <MaterialIcons name="home" size={24} color="#00A8FF" />
                         ) : (
-                            <FontAwesome name="tasks" size={24} color="#2d2e2e" />
+                            <MaterialIcons name="home" size={24} color="#2d2e2e" />
                         )
                 }}
             />
@@ -38,9 +39,9 @@ export default function Layout() {
                     headerShown: false,
                     tabBarIcon: ({ focused }) =>
                         focused ? (
-                            <AntDesign name="calendar" size={24} color="#00A8FF" />
+                            <MaterialIcons name="calendar-month" size={24} color="#00A8FF" />
                         ) : (
-                            <AntDesign name="calendar" size={24} color="#2d2e2e" />
+                            <MaterialIcons name="calendar-month" size={24} color="#2d2e2e" />
                         )
                 }}
             />
